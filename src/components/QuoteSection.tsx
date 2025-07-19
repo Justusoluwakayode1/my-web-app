@@ -296,7 +296,7 @@ const QuoteSection = () => {
                   </div>
                   <div>
                     <div className="font-medium text-foreground">Email Quotes</div>
-                    <div className="text-primary font-semibold">quotes@buildcorp.com</div>
+                    <div className="text-primary font-semibold">quotes@stores.com</div>
                   </div>
                 </div>
               </div>

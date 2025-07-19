@@ -1,6 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
 import { Building2, Hammer, ShieldCheck, Truck, Zap, Wrench } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import structuralSteelImg from '@/assets/structural-steel.jpg';
+import concreteMaterialsImg from '@/assets/concrete-materials.jpg';
+import safetyEquipmentImg from '@/assets/safety-equipment.jpg';
+import logisticsDeliveryImg from '@/assets/logistics-delivery.jpg';
+import electricalSystemsImg from '@/assets/electrical-systems.jpg';
+import heavyEquipmentImg from '@/assets/heavy-equipment.jpg';
 
 const categories = [
   {
@@ -9,7 +15,7 @@ const categories = [
     title: 'Structural Steel',
     description: 'High-grade steel beams, columns, and frameworks for industrial construction',
     features: ['ASTM Certified', 'Custom Fabrication', 'Fast Delivery'],
-    image: '/placeholder.svg?height=300&width=400'
+    image: structuralSteelImg
   },
   {
     id: 'concrete',
@@ -17,7 +23,7 @@ const categories = [
     title: 'Concrete & Masonry',
     description: 'Premium concrete mixes, blocks, and masonry supplies for foundations',
     features: ['High Strength', 'Weather Resistant', 'Various Grades'],
-    image: '/placeholder.svg?height=300&width=400'
+    image: concreteMaterialsImg
   },
   {
     id: 'safety',
@@ -25,7 +31,7 @@ const categories = [
     title: 'Safety Equipment',
     description: 'OSHA-compliant safety gear and protective equipment for job sites',
     features: ['OSHA Compliant', 'Bulk Ordering', '24/7 Support'],
-    image: '/placeholder.svg?height=300&width=400'
+    image: safetyEquipmentImg
   },
   {
     id: 'logistics',
@@ -33,7 +39,7 @@ const categories = [
     title: 'Logistics & Delivery',
     description: 'Reliable transportation and on-site delivery for all materials',
     features: ['Same Day Delivery', 'Crane Service', 'GPS Tracking'],
-    image: '/placeholder.svg?height=300&width=400'
+    image: logisticsDeliveryImg
   },
   {
     id: 'electrical',
@@ -41,7 +47,7 @@ const categories = [
     title: 'Electrical Systems',
     description: 'Industrial electrical components and wiring solutions',
     features: ['Code Compliant', 'Industrial Grade', 'Technical Support'],
-    image: '/placeholder.svg?height=300&width=400'
+    image: electricalSystemsImg
   },
   {
     id: 'tools',
@@ -49,7 +55,7 @@ const categories = [
     title: 'Heavy Equipment',
     description: 'Rental and sales of construction machinery and tools',
     features: ['Well Maintained', 'Operator Training', 'Flexible Terms'],
-    image: '/placeholder.svg?height=300&width=400'
+    image: heavyEquipmentImg
   }
 ];
 

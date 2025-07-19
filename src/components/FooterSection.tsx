@@ -31,7 +31,7 @@ const FooterSection = () => {
     {
       title: 'Company',
       links: [
-        'About BuildCorp',
+        'About ??stores',
         'Our History',
         'Safety Standards',
         'Quality Assurance',
@@ -87,15 +87,15 @@ const FooterSection = () => {
                 <Building2 className="w-7 h-7 text-accent-foreground" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold">BuildCorp Materials</h2>
-                <p className="text-primary-foreground/80 text-sm">Industrial Building Solutions</p>
+                <h2 className="text-2xl font-bold">??stores</h2>
+                <p className="text-primary-foreground/80 text-sm">Premium Building Materials</p>
               </div>
             </div>
             
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-              For over 30 years, BuildCorp Materials has been the trusted partner for construction 
-              professionals across the nation. We deliver quality materials, on-time service, 
-              and expert support for projects of all sizes.
+              ??stores is your premier destination for high-quality building materials and construction supplies. 
+              We offer comprehensive solutions for commercial, industrial, and residential projects with 
+              unmatched customer service and reliable delivery.
             </p>
 
             {/* Contact Information */}
@@ -106,7 +106,7 @@ const FooterSection = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-accent" />
-                <span>info@buildcorp.com</span>
+                <span>info@stores.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-accent" />
@@ -158,7 +158,7 @@ const FooterSection = () => {
         <div className="container mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-primary-foreground/80 text-sm">
-              © {currentYear} BuildCorp Materials. All rights reserved.
+              © {currentYear} ??stores. All rights reserved.
             </div>
             
             <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm">
