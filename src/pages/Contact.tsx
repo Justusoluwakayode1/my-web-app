@@ -32,152 +32,93 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="min-h-screen bg-gradient-to-b from-muted/30 to-background py-20">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-flex items-center space-x-2 bg-accent/20 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
-            <Brain className="w-5 h-5 text-accent animate-pulse" />
-            <span className="text-accent font-semibold">Let's Build the Future Together</span>
+    <section id="contact" className="min-h-screen bg-gradient-to-b from-muted/30 to-background py-10 px-4 overflow-x-hidden">
+      <div className="container mx-auto max-w-screen-xl px-4 sm:px-6">
+        <div className="text-center mb-12 animate-fade-in">
+          <div className="inline-flex items-center space-x-2 bg-accent/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
+            <Brain className="w-4 h-4 text-accent animate-pulse" />
+            <span className="text-accent font-semibold text-sm">Get In Touch</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-            Start Your AI Journey
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Contact Us
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your business with intelligent automation? Let's discuss how JUSTUS can deliver custom AI solutions tailored to your needs.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Ready to discuss your AI and automation needs? Reach out to us.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Info */}
-          <div className="space-y-6 animate-fade-in">
-            <Card className="bg-gradient-to-br from-card to-card/50 border-border/50 hover:border-accent/30 transition-all duration-300 group">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-accent to-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Phone className="w-5 h-5 text-primary-foreground" />
-                  </div>
-                  Phone
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-lg font-semibold">+234 813 158 8727</p>
-                <p className="text-muted-foreground">Available Mon-Sun 9AM-9PM WAT</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-card to-card/50 border-border/50 hover:border-accent/30 transition-all duration-300 group">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-accent to-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Mail className="w-5 h-5 text-primary-foreground" />
-                  </div>
-                  Email
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-lg font-semibold">justuskyle1@gmail.com</p>
-                <p className="text-muted-foreground">24-hour response guarantee</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-card to-card/50 border-border/50 hover:border-accent/30 transition-all duration-300 group">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-accent to-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <MapPin className="w-5 h-5 text-primary-foreground" />
-                  </div>
-                  Location
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-lg font-semibold">Akure, Ondo State</p>
-                <p className="text-muted-foreground">Nigeria • Remote consultations available</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-accent/10 to-primary/10 border-accent/30 p-6">
-              <div className="text-center">
-                <Zap className="w-12 h-12 text-accent mx-auto mb-4 animate-bounce" />
-                <h3 className="text-xl font-bold text-foreground mb-2">Founder & AI Architect</h3>
-                <p className="text-lg font-semibold text-accent">Omola Justus Oluwakayode</p>
-                <p className="text-muted-foreground mt-2">
-                  Bringing cutting-edge AI solutions to businesses across Nigeria and beyond
-                </p>
-              </div>
-            </Card>
-          </div>
-
-          {/* AI Consultation Form */}
-          <Card className="bg-gradient-to-br from-card to-card/50 border-border/50 hover:border-accent/30 transition-all duration-300 animate-fade-in">
-            <CardHeader className="text-center">
-              <CardTitle className="flex items-center justify-center gap-3 text-2xl">
-                <Brain className="w-8 h-8 text-accent animate-pulse" />
-                AI Consultation Request
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+          {/* Contact Info Cards */}
+          <Card className="bg-gradient-to-br from-card to-card/50 border-border/50 hover:border-accent/30 transition-all duration-300 group">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-gradient-to-r from-accent to-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Phone className="w-4 h-4 text-primary-foreground" />
+                </div>
+                <span className="text-sm">Phone</span>
               </CardTitle>
-              <p className="text-muted-foreground">Tell us about your business needs and AI goals</p>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <Input
-                      name="name"
-                      placeholder="Your Full Name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="transition-all duration-300 focus:border-accent focus:ring-accent"
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      name="email"
-                      type="email"
-                      placeholder="Business Email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="transition-all duration-300 focus:border-accent focus:ring-accent"
-                    />
-                  </div>
+              <p className="font-semibold">+234 813 158 8727</p>
+              <p className="text-muted-foreground text-sm">Mon-Sun 9AM-9PM WAT</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-to-br from-card to-card/50 border-border/50 hover:border-accent/30 transition-all duration-300 group">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-gradient-to-r from-accent to-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Mail className="w-4 h-4 text-primary-foreground" />
                 </div>
-                
-                <Input
-                  name="company"
-                  placeholder="Company/Organization Name"
-                  value={formData.company}
-                  onChange={handleChange}
-                  className="transition-all duration-300 focus:border-accent focus:ring-accent"
-                />
-                
-                <Textarea
-                  name="message"
-                  placeholder="Describe your business challenges, AI goals, or automation needs. What problems are you looking to solve?"
-                  rows={6}
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  className="transition-all duration-300 focus:border-accent focus:ring-accent"
-                />
-                
-                <Button 
-                  type="submit" 
-                  className="w-full bg-gradient-to-r from-accent to-primary text-primary-foreground hover:scale-105 transition-all duration-300 text-lg py-3 shadow-xl hover:shadow-accent/25 group"
-                >
-                  <Send className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform" />
-                  Request Free AI Consultation
-                </Button>
-                
-                <p className="text-center text-sm text-muted-foreground">
-                  No obligation • Free initial consultation • Custom solutions only
-                </p>
-              </form>
+                <span className="text-sm">Email</span>
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="font-semibold">justuskyle1@gmail.com</p>
+              <p className="text-muted-foreground text-sm">24-hour response</p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-to-br from-card to-card/50 border-border/50 hover:border-accent/30 transition-all duration-300 group">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-gradient-to-r from-accent to-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <MapPin className="w-4 h-4 text-primary-foreground" />
+                </div>
+                <span className="text-sm">Location</span>
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="font-semibold">Akure, Ondo State</p>
+              <p className="text-muted-foreground text-sm">Nigeria • Remote available</p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* AI Chatbot */}
+        <div className="max-w-3xl mx-auto animate-fade-in">
+          <Card className="bg-gradient-to-br from-card to-card/50 border-border/50">
+            <CardHeader className="text-center">
+              <CardTitle className="flex items-center justify-center gap-3 text-xl">
+                <Brain className="w-6 h-6 text-accent animate-pulse" />
+                AI Assistant
+              </CardTitle>
+              <p className="text-muted-foreground text-sm">Chat with our AI-powered assistant</p>
+            </CardHeader>
+            <CardContent>
+              <div className="bg-muted/30 rounded-lg p-4 min-h-[200px] border border-border/30">
+                <div className="text-center text-muted-foreground">
+                  <Brain className="w-8 h-8 mx-auto mb-2 text-accent" />
+                  <p className="text-sm">AI Chatbot powered by n8n</p>
+                  <p className="text-xs mt-1">Integration coming soon...</p>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-20 pt-8 border-t border-border/50 animate-fade-in">
+        <div className="text-center mt-16 pt-8 border-t border-border/50 animate-fade-in bg-gradient-to-r from-accent/5 via-primary/5 to-accent/5 rounded-lg p-8 mx-4">
           <div className="mb-6">
             <div className="flex items-center justify-center space-x-4 mb-4">
               <div className="w-12 h-12 bg-gradient-to-r from-accent to-primary rounded-xl flex items-center justify-center">
@@ -193,18 +134,18 @@ const Contact = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 text-center">
             <div>
-              <h4 className="font-semibold text-foreground mb-2">Services</h4>
-              <p className="text-sm text-muted-foreground">AI Workflows • Automation • Data Engineering</p>
+              <h4 className="font-semibold text-foreground mb-1 text-sm">Services</h4>
+              <p className="text-xs text-muted-foreground">AI Workflows • Automation • Data Engineering</p>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-2">Industries</h4>
-              <p className="text-sm text-muted-foreground">Finance • E-commerce • Healthcare • Education</p>
+              <h4 className="font-semibold text-foreground mb-1 text-sm">Industries</h4>
+              <p className="text-xs text-muted-foreground">Finance • E-commerce • Healthcare • Education</p>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-2">Founded</h4>
-              <p className="text-sm text-muted-foreground">2025 • Akure, Nigeria</p>
+              <h4 className="font-semibold text-foreground mb-1 text-sm">Founded</h4>
+              <p className="text-xs text-muted-foreground">2025 • Akure, Nigeria</p>
             </div>
           </div>
           
