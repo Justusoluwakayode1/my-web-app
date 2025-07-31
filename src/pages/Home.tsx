@@ -10,20 +10,30 @@ const Home = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Circuit Background */}
       <div 
-        className="absolute inset-0 z-0 animate-pulse"
+        className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url(/lovable-uploads/278ffca6-5d7c-4554-8de0-2d4763ab1e1d.png)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
+          animation: 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-accent/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/85 to-accent/80" />
         {/* Animated overlay patterns */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-20 w-4 h-4 bg-accent rounded-full animate-ping"></div>
-          <div className="absolute top-40 right-32 w-3 h-3 bg-accent rounded-full animate-ping animation-delay-1000"></div>
-          <div className="absolute bottom-32 left-40 w-2 h-2 bg-accent rounded-full animate-ping animation-delay-2000"></div>
+        <div className="absolute inset-0 opacity-40">
+          <div 
+            className="absolute top-20 left-20 w-4 h-4 bg-accent rounded-full"
+            style={{ animation: 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite' }}
+          ></div>
+          <div 
+            className="absolute top-40 right-32 w-3 h-3 bg-accent rounded-full"
+            style={{ animation: 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite 1s' }}
+          ></div>
+          <div 
+            className="absolute bottom-32 left-40 w-2 h-2 bg-accent rounded-full"
+            style={{ animation: 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite 2s' }}
+          ></div>
         </div>
       </div>
 

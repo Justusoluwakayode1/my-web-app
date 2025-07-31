@@ -57,15 +57,15 @@ const Chatbot = () => {
       <div className="fixed bottom-6 right-6 z-50">
         <Button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-14 h-14 rounded-full bg-gradient-to-r from-accent to-primary text-primary-foreground shadow-xl hover:scale-110 transition-all duration-300 hover:shadow-accent/25"
+          className="w-20 h-20 rounded-full bg-gradient-to-r from-accent to-primary text-primary-foreground shadow-xl hover:scale-110 transition-all duration-300 hover:shadow-accent/25 border-2 border-accent/30"
         >
-          {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+          {isOpen ? <X className="w-8 h-8" /> : <MessageCircle className="w-8 h-8" />}
         </Button>
       </div>
 
       {/* Chatbot Window */}
       {isOpen && (
-        <Card className="fixed bottom-24 right-6 w-80 h-96 z-40 bg-card border-border/50 shadow-2xl animate-scale-in">
+        <Card className="fixed bottom-28 right-6 w-96 h-[32rem] z-40 bg-card border-border/50 shadow-2xl animate-scale-in">
           <div className="flex flex-col h-full">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-border/50 bg-gradient-to-r from-accent/10 to-primary/10">
