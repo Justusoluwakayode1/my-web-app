@@ -57,9 +57,10 @@ const Chatbot = () => {
       <div className="fixed bottom-6 right-6 z-50">
         <Button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-20 h-20 rounded-full bg-gradient-to-r from-accent to-primary text-primary-foreground shadow-xl hover:scale-110 transition-all duration-300 hover:shadow-accent/25 border-2 border-accent/30"
+          className="w-20 h-20 rounded-full bg-gradient-to-br from-accent via-primary to-accent text-primary-foreground shadow-2xl hover:scale-110 transition-all duration-300 hover:shadow-accent/40 border-2 border-accent/20 backdrop-blur-sm relative overflow-hidden group"
         >
-          {isOpen ? <X className="w-8 h-8" /> : <MessageCircle className="w-8 h-8" />}
+          <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          {isOpen ? <X className="w-8 h-8 relative z-10" /> : <MessageCircle className="w-8 h-8 relative z-10 animate-pulse" />}
         </Button>
       </div>
 

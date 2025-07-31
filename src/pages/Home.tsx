@@ -16,23 +16,23 @@ const Home = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          animation: 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+          animation: 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/85 to-accent/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/92 to-accent/88" />
         {/* Animated overlay patterns */}
-        <div className="absolute inset-0 opacity-40">
+        <div className="absolute inset-0 opacity-50">
           <div 
             className="absolute top-20 left-20 w-4 h-4 bg-accent rounded-full"
-            style={{ animation: 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite' }}
+            style={{ animation: 'ping 5s cubic-bezier(0, 0, 0.2, 1) infinite' }}
           ></div>
           <div 
             className="absolute top-40 right-32 w-3 h-3 bg-accent rounded-full"
-            style={{ animation: 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite 1s' }}
+            style={{ animation: 'ping 5s cubic-bezier(0, 0, 0.2, 1) infinite 1.5s' }}
           ></div>
           <div 
             className="absolute bottom-32 left-40 w-2 h-2 bg-accent rounded-full"
-            style={{ animation: 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite 2s' }}
+            style={{ animation: 'ping 5s cubic-bezier(0, 0, 0.2, 1) infinite 3s' }}
           ></div>
         </div>
       </div>
