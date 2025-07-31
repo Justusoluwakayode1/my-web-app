@@ -10,20 +10,21 @@ const Home = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Circuit Background */}
       <div 
-        className="absolute inset-0 z-0 animate-pulse"
+        className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url(/lovable-uploads/278ffca6-5d7c-4554-8de0-2d4763ab1e1d.png)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
+          animation: 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-accent/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/98 via-primary/95 to-accent/90" />
         {/* Animated overlay patterns */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-20 w-4 h-4 bg-accent rounded-full animate-ping"></div>
-          <div className="absolute top-40 right-32 w-3 h-3 bg-accent rounded-full animate-ping animation-delay-1000"></div>
-          <div className="absolute bottom-32 left-40 w-2 h-2 bg-accent rounded-full animate-ping animation-delay-2000"></div>
+        <div className="absolute inset-0 opacity-15">
+          <div className="absolute top-20 left-20 w-4 h-4 bg-accent rounded-full" style={{ animation: 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite' }}></div>
+          <div className="absolute top-40 right-32 w-3 h-3 bg-accent rounded-full" style={{ animation: 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite 1s' }}></div>
+          <div className="absolute bottom-32 left-40 w-2 h-2 bg-accent rounded-full" style={{ animation: 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite 2s' }}></div>
         </div>
       </div>
 
@@ -33,7 +34,7 @@ const Home = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4 animate-fade-in">
               <div className="w-12 h-12 bg-gradient-to-r from-accent to-primary rounded-xl flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
-                <Brain className="w-6 h-6 text-primary-foreground animate-pulse" />
+                <Brain className="w-6 h-6 text-primary-foreground" style={{ animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-foreground tracking-tight">JUSTUS</h1>
@@ -55,15 +56,15 @@ const Home = () => {
         <div className="max-w-5xl mx-auto animate-fade-in">
           {/* Innovation Badge */}
           <div className="inline-flex items-center space-x-2 bg-accent/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8 animate-scale-in">
-            <Zap className="w-5 h-5 text-accent animate-pulse" />
+            <Zap className="w-5 h-5 text-accent" style={{ animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
             <span className="text-accent font-semibold tracking-wide">AI Innovation • Smart Automation</span>
           </div>
           
           <h1 className="text-6xl md:text-8xl font-bold text-primary-foreground mb-8 leading-tight">
-            <span className="bg-gradient-to-r from-primary-foreground to-accent bg-clip-text text-transparent animate-pulse">
+            <span className="bg-gradient-to-r from-primary-foreground to-accent bg-clip-text text-transparent" style={{ animation: 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite' }}>
               Intelligent
             </span>
-            <span className="block text-accent animate-bounce">Innovation</span>
+            <span className="block text-accent" style={{ animation: 'bounce 4s infinite' }}>Innovation</span>
           </h1>
           
           <p className="text-2xl md:text-3xl text-primary-foreground/90 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
