@@ -1,5 +1,6 @@
 import { ArrowRight, Phone, Mail, MapPin, Brain, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import NEW from "@/assets/NEW.jpg"
 
 const Home = () => {
   const scrollToProducts = () => {
@@ -42,8 +43,8 @@ const Home = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4 animate-fade-in">
-              <div className="w-12 h-12 bg-gradient-to-r from-accent to-primary rounded-xl flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
-                <Brain className="w-6 h-6 text-primary-foreground animate-pulse" />
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+                <img src={NEW}></img>
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-foreground tracking-tight">JUSTUS</h1>
@@ -91,13 +92,7 @@ const Home = () => {
               <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </Button>
             
-            <Button 
-              variant="outline" 
-              className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 text-lg px-10 py-4 rounded-xl backdrop-blur-sm transition-all duration-300 hover:scale-105"
-              size="lg"
-            >
-              View Portfolio
-            </Button>
+            
           </div>
 
           {/* Trust Indicators */}
