@@ -125,38 +125,83 @@ const Contact = () => {
         </div>
 
         {/* Footer */}
-        <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 backdrop-blur-sm border border-border/30 rounded-2xl p-8 text-center animate-fade-in">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
-            <div>
-              <h5 className="font-semibold text-foreground mb-2">Quick Links</h5>
-              <div className="space-y-1 text-sm text-muted-foreground">
-                <p>AI Solutions</p>
-                <p>Automation Services</p>
-                <p>Consulting</p>
+        <div className="bg-gradient-to-br from-card/60 via-card/40 to-card/60 backdrop-blur-md border border-border/30 rounded-3xl p-10 animate-fade-in">
+          {/* Top brand + contact + social */}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-10">
+            {/* Brand */}
+            <div className="text-left">
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-accent to-primary rounded-xl flex items-center justify-center">
+                  <Brain className="w-7 h-7 text-primary-foreground" />
+                </div>
+                <div>
+                  <h4 className="text-2xl font-bold text-foreground leading-tight">JUSTUS</h4>
+                  <p className="text-sm text-accent font-semibold">One Name. Endless Innovation</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground max-w-sm">
+                Enterprise-grade AI solutions and automation that deliver measurable results. We design, build, and scale intelligent systems tailored to your business.
+              </p>
+            </div>
+
+            {/* Contact */}
+            <div className="text-left">
+              <h5 className="font-semibold text-foreground mb-3">Contact</h5>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p className="flex items-center space-x-2"><Phone className="w-4 h-4" /><span>+234 813 158 8727</span></p>
+                <p className="flex items-center space-x-2"><Mail className="w-4 h-4" /><span>justuskyle1@gmail.com</span></p>
+                <p className="flex items-center space-x-2"><MapPin className="w-4 h-4" /><span>Akure, Ondo State, Nigeria</span></p>
+                <p>Business Hours: Mon–Fri 9AM–6PM | Sat–Sun 10AM–4PM</p>
               </div>
             </div>
-            <div>
-              <h5 className="font-semibold text-foreground mb-2">Business Hours</h5>
-              <div className="space-y-1 text-sm text-muted-foreground">
-                <p>Monday - Friday: 9AM - 6PM</p>
-                <p>Saturday - Sunday: 10AM - 4PM</p>
-                <p>Emergency Support: 24/7</p>
+
+            {/* Links */}
+            <div className="text-left">
+              <h5 className="font-semibold text-foreground mb-3">Solutions</h5>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p>AI Workflows</p>
+                <p>Smart Automation</p>
+                <p>Data Engineering</p>
+                <p>NLP Solutions</p>
+                <p>Cloud Integration</p>
               </div>
             </div>
-            <div>
-              <h5 className="font-semibold text-foreground mb-2">Support</h5>
-              <div className="space-y-1 text-sm text-muted-foreground">
-                <p>Technical Documentation</p>
+
+            {/* Support + Social */}
+            <div className="text-left">
+              <h5 className="font-semibold text-foreground mb-3">Support</h5>
+              <div className="space-y-2 text-sm text-muted-foreground mb-4">
                 <p>Customer Support</p>
                 <p>Project Consultations</p>
+                <p>Technical Documentation</p>
+              </div>
+              <div className="flex space-x-3">
+                <a href="#" className="w-10 h-10 bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg flex items-center justify-center hover:from-accent hover:to-primary hover:text-primary-foreground transition-all duration-300">
+                  <Facebook className="w-5 h-5" />
+                </a>
+                <a href="#" className="w-10 h-10 bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg flex items-center justify-center hover:from-accent hover:to-primary hover:text-primary-foreground transition-all duration-300">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="#" className="w-10 h-10 bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg flex items-center justify-center hover:from-accent hover:to-primary hover:text-primary-foreground transition-all duration-300">
+                  <Twitter className="w-5 h-5" />
+                </a>
+                <a href="#" className="w-10 h-10 bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg flex items-center justify-center hover:from-accent hover:to-primary hover:text-primary-foreground transition-all duration-300">
+                  <Github className="w-5 h-5" />
+                </a>
               </div>
             </div>
           </div>
-          
-          <div className="border-t border-border/30 pt-6">
-            <p className="text-muted-foreground text-sm">
-              © 2025 JUSTUS. All rights reserved. | Innovative AI Solutions • Custom Automation • Future-Ready Technology
+
+          {/* Bottom bar */}
+          <div className="border-t border-border/30 pt-6 flex flex-col md:flex-row items-center justify-between text-sm">
+            <p className="text-muted-foreground mb-3 md:mb-0">
+              © 2025 JUSTUS — Innovative AI Solutions • Custom Automation • Future‑Ready Technology
             </p>
+            <div className="text-muted-foreground">
+              <span>Privacy Policy</span>
+              <span className="mx-2">•</span>
+              <span>Terms of Service</span>
+            </div>
           </div>
         </div>
       </div>

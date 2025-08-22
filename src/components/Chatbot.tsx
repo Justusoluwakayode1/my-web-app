@@ -25,55 +25,6 @@ const Chatbot = () => {
     scrollToBottom();
   }, [messages]);
 
-  //   const handleSendMessage = async (e: React.FormEvent) => {
-  //     e.preventDefault();
-  //     if (!inputValue.trim()) return;
-
-  //     const userMessage = {
-  //       id: messages.length + 1,
-  //       text: inputValue,
-  //       isBot: false,
-  //       timestamp: new Date()
-  //     };
-
-  //     setMessages(prev => [...prev, userMessage]);
-  //     setInputValue('');
-  //     const sendMessage = async (currentInput: string): Promise<void> => {
-  //   try {
-  //     const response = await fetch("https://automation.toltemtech.com.ng/webhook/chatbot", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify({ message: currentInput }),
-  //     });
-
-  //     if (!response.ok) {
-  //       throw new Error(`HTTP error! status: ${response.status}`);
-  //     }
-
-  //     const data: { reply: string } = await response.json();
-
-  //     console.log("Bot reply:", data.reply);
-  //     // Update UI here (e.g., setChatHistory or display in DOM)
-
-  //   } catch (error) {
-  //     console.error("Error sending message:", error);
-  //   }
-  // };
-
-
-  //     // Simulate typing delay
-  //     setTimeout(() => {
-  //       const botResponse = {
-  //         id: messages.length + 2,
-  //         text: "Thanks for your message! This chatbot is powered by n8n workflows. Our team will get back to you shortly with personalized AI solutions for your business needs.",
-  //         isBot: true,
-  //         timestamp: new Date()
-  //       };
-  //       setMessages(prev => [...prev, botResponse]);
-  //     }, 1000);
-  //   };
-
-
   async function handleSendMessage(e: React.FormEvent) {
     e.preventDefault();
     if (!inputValue.trim()) return;
@@ -88,8 +39,6 @@ const Chatbot = () => {
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
 
-
-
     const response = await fetch('https://automation.toltemtech.com.ng/webhook/chatbot', {
       method: 'POST',
       headers: {
@@ -98,23 +47,11 @@ const Chatbot = () => {
       body: JSON.stringify({ message: inputValue })
     });
 
-
-
     const data = await response.json();
-
 
     var bot_mesage = data.output; // This will contain the AI's response
 
- 
-
     setTimeout(() => {
-      // const botResponse = {
-      //   id: messages.length + 2,
-      //   text: "Thanks for your message! This chatbot is powered by n8n workflows. Our team will get back to you shortly with personalized AI solutions for your business needs.",
-      //   isBot: true,
-      //   timestamp: new Date()
-      // };
-
       const botResponse = {
         id: messages.length + 2,
         text: bot_mesage,
@@ -125,8 +62,6 @@ const Chatbot = () => {
       setMessages(prev => [...prev, botResponse]);
     }, 1000);
 
-
-
     return;
   }
 
@@ -134,13 +69,18 @@ const Chatbot = () => {
     <>
       {/* Chatbot Toggle Button */}
       <div className="fixed bottom-6 right-6 z-50">
-        <Button
-          onClick={() => setIsOpen(!isOpen)}
-          className="w-20 h-20 rounded-full bg-gradient-to-br from-accent via-primary to-accent text-primary-foreground shadow-2xl hover:scale-110 transition-all duration-300 hover:shadow-accent/40 border-2 border-accent/20 backdrop-blur-sm relative overflow-hidden group"
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          {isOpen ? <X className="w-8 h-8 relative z-10" /> : <MessageCircle className="w-15 h-15 relative z-10 animate-pulse" />}
-        </Button>
+        <div className="flex flex-col items-center space-y-1.5">
+          <Button
+            onClick={() => setIsOpen(!isOpen)}
+            className="w-20 h-20 rounded-full bg-gradient-to-br from-accent via-primary to-accent text-primary-foreground shadow-2xl hover:scale-110 transition-all duration-300 hover:shadow-accent/40 border-2 border-accent/20 backdrop-blur-sm relative overflow-hidden group"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            {isOpen ? <X className="w-8 h-8 relative z-10" /> : <MessageCircle className="w-15 h-15 relative z-10 animate-pulse" />}
+          </Button>
+          <span className="text-base font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent px-3 py-1.5 rounded-md border border-accent/30 shadow-md">
+            AI Assistant
+          </span>
+        </div>
       </div>
 
       {/* Chatbot Window */}
