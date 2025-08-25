@@ -139,10 +139,7 @@ const Products = () => {
                   <div className="absolute bottom-4 left-4 right-4">
                     <h3 className="text-xl font-bold text-primary-foreground">{solution.title}</h3>
                   </div>
-                  {/* Price Badge */}
-                  <div className="absolute top-4 right-4 bg-accent/90 backdrop-blur-sm rounded-lg px-3 py-1">
-                    <span className="text-sm font-bold text-primary-foreground">{solution.price}</span>
-                  </div>
+                  
                 </div>
                 
                 <CardContent className="space-y-4 p-6">
